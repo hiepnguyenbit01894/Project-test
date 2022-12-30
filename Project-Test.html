@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1" />
+
     <title>ProjecTest</title>
     <!-- link Css -->
     <link rel="stylesheet" href="scss/Project-Test.css">
@@ -23,8 +24,8 @@
 <body>
     <!-- Header -->
     <div class="header">
-        <div class="header_main">
-            <div class="container flex-between">
+        <div class="container ">
+            <div class="header_main flex-between">
                 <div class="header_logo">
                     <img src="image/logo.png" alt="">
                 </div>
@@ -41,23 +42,42 @@
         </div>
     </div>
     <div class="header_mobile">
-        <div class="header_main">
-            <div class="container flex-between">
-                <div class="header_navbutton">
+        <div class="container">
+            <div class="header_main flex-around">
+                <!-- list navigation -->
+                <div id="mobile_listlogo">
                     <i class="fa-solid fa-list"></i>
                 </div>
-                <div class="header_navigation flex-between">
-                    <span><a href="#!" class="navigation_infor--item">Features</a></span>
-                    <span><a href="#!" class="navigation_infor--item">Pricing</a></span>
-                    <span><a href="#!" class="navigation_infor--item">Contact</a></span>
+                <ul class="mobile_navlist">
+                    <li id="navlist_exit">
+                        <i class="fa-solid fa-x"></i>
+                    </li>
+                    <li class="mobile_navlist--item">
+                        Features
+                    </li>
+                    <li class="mobile_navlist--item">
+                        Pricing
+                    </li>
+                    <li class="mobile_navlist--item">
+                        Contact
+                    </li>
+                </ul>
+                <div class="bglist">
+
                 </div>
+                <!-- ========= -->
                 <div class="header_logo">
                     <img src="image/logo.png" alt="">
                 </div>
-                <div class="header_navigation--form flex-between">
-                    <span><a href="#!" class="navigation_form--item">Log In</a></span>
-                    <span><a href="#!" class="navigation_form--start">Start now</a></span>
+                <!-- form -->
+                <div id="mobile_userlogo">
+                    <i class="fa-regular fa-user"></i>
                 </div>
+                <ul class="mobile_formlist">
+                    <li class="formlist_item">Login</li>
+                    <li class="formlist_item">Start Now</li>
+                </ul>
+                <!--  -->
             </div>
         </div>
 
@@ -90,8 +110,8 @@
                     We help the world’s leading organizations follow their shipping
                 </p>
             </div>
-            <div class="business_options flex-between">
-                <div class="business_options--item">
+            <ul class="business_options flex-between">
+                <li class="business_options--item">
                     <img src="image/briefcase.png" alt="">
                     <h4 class="business_item--title">
                         Shipping communication
@@ -100,28 +120,28 @@
                         At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.
                     </p>
                     <span class="business_item--discover">Discover</span>
-                </div>
-                <div class="business_options--item">
+                </li>
+                <li class="business_options--item">
                     <img src="image/life buoy.png" alt="">
                     <h4 class="business_item--title">
-                        Shipping communication
+                        Marketing
                     </h4>
                     <p class="business_item--text">
                         At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.
                     </p>
                     <span class="business_item--discover">Discover</span>
-                </div>
-                <div class="business_options--item">
+                </li>
+                <li class="business_options--item">
                     <img src="image/tool.png" alt="">
                     <h4 class="business_item--title">
-                        Shipping communication
+                        Logistic performance
                     </h4>
                     <p class="business_item--text">
                         At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.
                     </p>
                     <span class="business_item--discover">Discover</span>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </div>
     <!-- primary -->
@@ -141,9 +161,9 @@
                         minimum ponderum.
                         Est audiam animal molestiae te. Ex duo eripuit mentitum.
                     </div>
-                    <div class="primary_infor--form">
+                    <div class="primary_infor--form flex-between">
                         <input type="email" id="email" name="email" placeholder="Placeholder">
-                        <input type="submit" id="submit">
+                        <input type="submit" id="submit" value="Primary action">
                     </div>
                     <p class="primary_infor--note">
                         By clicking “Primary action” you accepting ipsum dolor sit amet, sit ea brute mediocritatem, eu
@@ -153,10 +173,108 @@
                     </p>
                 </div>
             </div>
-
+        </div>
+    </div>
+    <!-- secondary -->
+    <div class="secondary">
+        <div class="container">
+            <div class="secondary_main flex-between">
+                <div class="secondary_infor">
+                    <h2 class="secondary_infor--title">
+                        Fostering creativity and innovationeam definiebas reformidans, exerci persecuti
+                    </h2>
+                    <div class="secondary_infor--options flex-between">
+                        <div class="secondary_options--item">
+                            <div class="secondary_item--image">
+                                <img src="image/box.png" alt="">
+                            </div>
+                            <p class="secondary_item--text">
+                                Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit
+                                quaerendum.
+                            </p>
+                        </div>
+                        <div class="secondary_options--item">
+                            <div class="secondary_item--image">
+                                <img src="image/truck.png" alt="">
+                            </div>
+                            <p class="secondary_item--text">
+                                At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit mentitum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="secondary_image">
+                    <img src="image/image1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- news -->
+    <div class="news">
+        <div class="container">
+            <div class="news_main flex-between">
+                <div class="news_item">
+                    <div class="news_item--image">
+                        <img src="image/image2.png" alt="">
+                    </div>
+                    <div class="news_item--text">
+                        <h3 class="news_item--title">
+                            Ad eos saepe lucilius
+                        </h3>
+                        <p class="news_item--para">
+                            At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.
+                        </p>
+                    </div>
+                </div>
+                <div class="news_item">
+                    <div class="news_item--image">
+                        <img src="image/image3.png" alt="">
+                    </div>
+                    <div class="news_item--text">
+                        <h3 class="news_item--title">
+                            Ad eos saepe lucilius
+                        </h3>
+                        <p class="news_item--para">
+                            At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.
+                        </p>
+                    </div>
+                </div>
+                <div class="news_item">
+                    <div class="news_item--image">
+                        <img src="image/image4.png" alt="">
+                    </div>
+                    <div class="news_item--text">
+                        <h3 class="news_item--title">
+                            Ad eos saepe lucilius
+                        </h3>
+                        <p class="news_item--para">
+                            At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.
+                        </p>
+                    </div>
+                </div>
+                <div class="news_item">
+                    <div class="news_item--image">
+                        <img src="image/image5.png" alt="">
+                    </div>
+                    <div class="news_item--text">
+                        <h3 class="news_item--title">
+                            Ad eos saepe lucilius
+                        </h3>
+                        <p class="news_item--para">
+                            At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
-<script src="js/Projec-Test.js"></script>
 
+<!-- jquery -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- file js -->
+<script src="js/Projec-Test.js"></script>
 </html>

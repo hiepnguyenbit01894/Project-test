@@ -1,0 +1,22 @@
+.news{
+    font-family: 'Mulish',sans-serif;
+    text-align: center;
+    margin-bottom: 95px;
+    .news_main{
+        gap: 30px;
+        .news_item{
+            .news_item--text{
+                margin-top: 32px;
+                .news_item--title{
+                    @include inforText(700,18px,24px,0.1px);
+                    color: $letterblack;
+                    margin-bottom: 12px;
+                }
+                .news_item--para{
+                    @include inforText(400,14px,20px,0.2px);
+                    color:$fonttit;
+                }
+            }
+        }
+    }
+}

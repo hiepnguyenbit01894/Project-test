@@ -1,40 +1,85 @@
-.primary {
+.primary,
+.secondary {
   font-family: "Mulish", sans-serif;
-  .primary_main {
+  margin-bottom: 108px;
+
+  .primary_main,
+  .secondary_main {
     gap: 30px;
-    .primary_image {
+
+    .primary_image,
+    .secondary_image {
       width: 50%;
+
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
     }
-    .primary_infor {
+
+    .primary_infor,
+    .secondary_infor {
       width: 50%;
-      .primary_infor--title {
-        width: 540px;
+
+      .primary_infor--title,
+      .secondary_infor--title {
         margin-bottom: 32px;
         @include inforText(700, 32px, 40px, 0.1px);
+      }
+      .secondary_infor--title{
+        margin-bottom: 56px;
+
       }
       .primary_infor--text {
         @include inforText(400, 16px, 22px, 00.1px);
         color: $letterblack;
-        width: 540px;
       }
+
       .primary_infor--form {
         margin-top: 56px;
+        width: 100%;
+
         input[type="email"] {
           height: 20px;
-          width: 377px;
+          width: 370px;
           background-color: #f4f5f4;
           border: none;
           padding: 11px 16px;
-          ::placeholder {
-            // @include inforText(400, 14px, 20px, 0.2px);
+          gap: 30px;
+        }
+
+        ::placeholder {
+          @include inforText(400, 14px, 20px, 0.2px);
+        }
+
+        input[type="submit"] {
+          @include button;
+          border: none;
+          cursor: pointer;
+        }
+      }
+
+      .primary_infor--note {
+        margin-top: 16px;
+        @include inforText(600, 12px, 16px, 00.2px);
+        color: $colortext;
+      }
+      .secondary_infor--options{
+        gap: 30px;
+        .secondary_options--item{
+          .secondary_item--image{
+            margin-bottom: 16px;
+          }
+          .secondary_item--text{
+            @include inforText(400,16px,22px,0.3px);
+            color:$colortext;
           }
         }
       }
     }
   }
+}
+.secondary {
+  margin-bottom: 86px;
 }

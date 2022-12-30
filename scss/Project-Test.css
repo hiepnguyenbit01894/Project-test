@@ -17,7 +17,7 @@
 }
 
 .container {
-  width: 1440px;
+  width: 1110px;
   margin: auto;
 }
 
@@ -25,13 +25,111 @@
   font-family: "Mulish", sans-serif;
 }
 
+@-webkit-keyframes fadeDown {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
+@-webkit-keyframes dropList {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes dropList {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes botToTop {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes botToTop {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes moveNoti {
+  0% {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveNoti {
+  0% {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes moveNoti1 {
+  0% {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveNoti1 {
+  0% {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .header,
 .header_mobile {
   font-family: "Mulish", sans-serif;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  background-color: #fff;
 }
 .header .header_main,
 .header_mobile .header_main {
-  padding: 40px 0;
+  padding: 20px 0;
 }
 .header span,
 .header_mobile span {
@@ -80,6 +178,65 @@
   transition: 0.4s;
 }
 
+.header_mobile .header_main .mobile_navlist {
+  position: fixed;
+  z-index: 2;
+  left: -100%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  transition: 0.4s;
+}
+.header_mobile .header_main .mobile_navlist #navlist_exit {
+  margin-bottom: 20px;
+  float: inline-start;
+}
+.header_mobile .header_main .mobile_navlist .mobile_navlist--item {
+  padding: 10px 0;
+  transition: 0.3s;
+}
+.header_mobile .header_main .mobile_navlist .mobile_navlist--item:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.header_mobile .header_main .mobile_formlist {
+  position: fixed;
+  top: -100%;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.header_mobile .header_main .mobile_formlist .formlist_item {
+  width: 100%;
+  padding: 1vw 100vw;
+  transition: 0.4s;
+}
+.header_mobile .header_main .mobile_formlist .formlist_item:hover {
+  background-color: #3c64b1;
+  transition: 0.4s;
+  color: #fff;
+}
+.header_mobile .header_main .bglist {
+  width: 100vw;
+  height: 200%;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  position: fixed;
+  z-index: -99;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+.header_mobile .header_main .active {
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease;
+}
+
 .banner {
   background: url(/image/bg.png) #e5e5e5;
   position: relative;
@@ -87,6 +244,7 @@
   font-family: "Mulish", sans-serif;
   text-align: center;
   width: 100vw;
+  margin-top: 80px;
 }
 .banner .banner_main {
   gap: 56px;
@@ -107,6 +265,11 @@
   font-size: 44px;
   line-height: 56px;
   letter-spacing: 0.2px;
+  opacity: 1;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  -webkit-animation: moveNoti 4s forwards !important;
+          animation: moveNoti 4s forwards !important;
 }
 .banner .banner_main .banner_para .banner_text {
   margin-top: 32px;
@@ -116,6 +279,10 @@
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 0.3px;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  -webkit-animation: dropList 4s forwards !important;
+          animation: dropList 4s forwards !important;
 }
 .banner .banner_main .banner_buttons {
   margin-top: 56px;
@@ -130,6 +297,10 @@
   color: #fff;
   transition: 0.4s;
   cursor: pointer;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  -webkit-animation: moveNoti 4s forwards !important;
+          animation: moveNoti 4s forwards !important;
 }
 .banner .banner_main .banner_buttons .banner_buttons--start:hover {
   background-color: #6987be;
@@ -144,6 +315,10 @@
   border: 1px #3c64b1 solid;
   color: #3c64b1;
   transition: 0.4s;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  -webkit-animation: moveNoti1 4s forwards !important;
+          animation: moveNoti1 4s forwards !important;
 }
 .banner .banner_main .banner_buttons .banner_buttons--learn:hover {
   background-color: #6987be;
@@ -178,6 +353,24 @@
   color: #737b7d;
   margin-bottom: 35px;
 }
+.business .business_options li:first-child {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation: botToTop 2s forwards !important;
+          animation: botToTop 2s forwards !important;
+}
+.business .business_options li:nth-child(2) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation: botToTop 4s forwards !important;
+          animation: botToTop 4s forwards !important;
+}
+.business .business_options li:nth-child(3) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation: botToTop 6s forwards !important;
+          animation: botToTop 6s forwards !important;
+}
 .business .business_options .business_options--item {
   width: 350px;
   cursor: pointer;
@@ -211,56 +404,456 @@
   color: #3c64b1;
 }
 
-.primary {
+.primary,
+.secondary {
   font-family: "Mulish", sans-serif;
+  margin-bottom: 108px;
 }
-.primary .primary_main {
+.primary .primary_main,
+.primary .secondary_main,
+.secondary .primary_main,
+.secondary .secondary_main {
   gap: 30px;
 }
-.primary .primary_main .primary_image {
+.primary .primary_main .primary_image,
+.primary .primary_main .secondary_image,
+.primary .secondary_main .primary_image,
+.primary .secondary_main .secondary_image,
+.secondary .primary_main .primary_image,
+.secondary .primary_main .secondary_image,
+.secondary .secondary_main .primary_image,
+.secondary .secondary_main .secondary_image {
   width: 50%;
 }
-.primary .primary_main .primary_image img {
+.primary .primary_main .primary_image img,
+.primary .primary_main .secondary_image img,
+.primary .secondary_main .primary_image img,
+.primary .secondary_main .secondary_image img,
+.secondary .primary_main .primary_image img,
+.secondary .primary_main .secondary_image img,
+.secondary .secondary_main .primary_image img,
+.secondary .secondary_main .secondary_image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.primary .primary_main .primary_infor {
+.primary .primary_main .primary_infor,
+.primary .primary_main .secondary_infor,
+.primary .secondary_main .primary_infor,
+.primary .secondary_main .secondary_infor,
+.secondary .primary_main .primary_infor,
+.secondary .primary_main .secondary_infor,
+.secondary .secondary_main .primary_infor,
+.secondary .secondary_main .secondary_infor {
   width: 50%;
 }
-.primary .primary_main .primary_infor .primary_infor--title {
-  width: 540px;
+.primary .primary_main .primary_infor .primary_infor--title,
+.primary .primary_main .primary_infor .secondary_infor--title,
+.primary .primary_main .secondary_infor .primary_infor--title,
+.primary .primary_main .secondary_infor .secondary_infor--title,
+.primary .secondary_main .primary_infor .primary_infor--title,
+.primary .secondary_main .primary_infor .secondary_infor--title,
+.primary .secondary_main .secondary_infor .primary_infor--title,
+.primary .secondary_main .secondary_infor .secondary_infor--title,
+.secondary .primary_main .primary_infor .primary_infor--title,
+.secondary .primary_main .primary_infor .secondary_infor--title,
+.secondary .primary_main .secondary_infor .primary_infor--title,
+.secondary .primary_main .secondary_infor .secondary_infor--title,
+.secondary .secondary_main .primary_infor .primary_infor--title,
+.secondary .secondary_main .primary_infor .secondary_infor--title,
+.secondary .secondary_main .secondary_infor .primary_infor--title,
+.secondary .secondary_main .secondary_infor .secondary_infor--title {
   margin-bottom: 32px;
   font-weight: 700;
   font-size: 32px;
   line-height: 40px;
   letter-spacing: 0.1px;
 }
-.primary .primary_main .primary_infor .primary_infor--text {
+.primary .primary_main .primary_infor .secondary_infor--title,
+.primary .primary_main .secondary_infor .secondary_infor--title,
+.primary .secondary_main .primary_infor .secondary_infor--title,
+.primary .secondary_main .secondary_infor .secondary_infor--title,
+.secondary .primary_main .primary_infor .secondary_infor--title,
+.secondary .primary_main .secondary_infor .secondary_infor--title,
+.secondary .secondary_main .primary_infor .secondary_infor--title,
+.secondary .secondary_main .secondary_infor .secondary_infor--title {
+  margin-bottom: 56px;
+}
+.primary .primary_main .primary_infor .primary_infor--text,
+.primary .primary_main .secondary_infor .primary_infor--text,
+.primary .secondary_main .primary_infor .primary_infor--text,
+.primary .secondary_main .secondary_infor .primary_infor--text,
+.secondary .primary_main .primary_infor .primary_infor--text,
+.secondary .primary_main .secondary_infor .primary_infor--text,
+.secondary .secondary_main .primary_infor .primary_infor--text,
+.secondary .secondary_main .secondary_infor .primary_infor--text {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 0.1px;
   color: #373f41;
-  width: 540px;
 }
-.primary .primary_main .primary_infor .primary_infor--form {
+.primary .primary_main .primary_infor .primary_infor--form,
+.primary .primary_main .secondary_infor .primary_infor--form,
+.primary .secondary_main .primary_infor .primary_infor--form,
+.primary .secondary_main .secondary_infor .primary_infor--form,
+.secondary .primary_main .primary_infor .primary_infor--form,
+.secondary .primary_main .secondary_infor .primary_infor--form,
+.secondary .secondary_main .primary_infor .primary_infor--form,
+.secondary .secondary_main .secondary_infor .primary_infor--form {
   margin-top: 56px;
+  width: 100%;
 }
-.primary .primary_main .primary_infor .primary_infor--form input[type=email] {
+.primary .primary_main .primary_infor .primary_infor--form input[type=email],
+.primary .primary_main .secondary_infor .primary_infor--form input[type=email],
+.primary .secondary_main .primary_infor .primary_infor--form input[type=email],
+.primary .secondary_main .secondary_infor .primary_infor--form input[type=email],
+.secondary .primary_main .primary_infor .primary_infor--form input[type=email],
+.secondary .primary_main .secondary_infor .primary_infor--form input[type=email],
+.secondary .secondary_main .primary_infor .primary_infor--form input[type=email],
+.secondary .secondary_main .secondary_infor .primary_infor--form input[type=email] {
   height: 20px;
-  width: 377px;
+  width: 370px;
   background-color: #f4f5f4;
   border: none;
   padding: 11px 16px;
+  gap: 30px;
 }
-@media screen and (max-width: 768px) {
-  .header_mobile .header_navigation {
+.primary .primary_main .primary_infor .primary_infor--form ::-moz-placeholder, .primary .primary_main .secondary_infor .primary_infor--form ::-moz-placeholder, .primary .secondary_main .primary_infor .primary_infor--form ::-moz-placeholder, .primary .secondary_main .secondary_infor .primary_infor--form ::-moz-placeholder, .secondary .primary_main .primary_infor .primary_infor--form ::-moz-placeholder, .secondary .primary_main .secondary_infor .primary_infor--form ::-moz-placeholder, .secondary .secondary_main .primary_infor .primary_infor--form ::-moz-placeholder, .secondary .secondary_main .secondary_infor .primary_infor--form ::-moz-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+.primary .primary_main .primary_infor .primary_infor--form :-ms-input-placeholder, .primary .primary_main .secondary_infor .primary_infor--form :-ms-input-placeholder, .primary .secondary_main .primary_infor .primary_infor--form :-ms-input-placeholder, .primary .secondary_main .secondary_infor .primary_infor--form :-ms-input-placeholder, .secondary .primary_main .primary_infor .primary_infor--form :-ms-input-placeholder, .secondary .primary_main .secondary_infor .primary_infor--form :-ms-input-placeholder, .secondary .secondary_main .primary_infor .primary_infor--form :-ms-input-placeholder, .secondary .secondary_main .secondary_infor .primary_infor--form :-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+.primary .primary_main .primary_infor .primary_infor--form ::placeholder,
+.primary .primary_main .secondary_infor .primary_infor--form ::placeholder,
+.primary .secondary_main .primary_infor .primary_infor--form ::placeholder,
+.primary .secondary_main .secondary_infor .primary_infor--form ::placeholder,
+.secondary .primary_main .primary_infor .primary_infor--form ::placeholder,
+.secondary .primary_main .secondary_infor .primary_infor--form ::placeholder,
+.secondary .secondary_main .primary_infor .primary_infor--form ::placeholder,
+.secondary .secondary_main .secondary_infor .primary_infor--form ::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+.primary .primary_main .primary_infor .primary_infor--form input[type=submit],
+.primary .primary_main .secondary_infor .primary_infor--form input[type=submit],
+.primary .secondary_main .primary_infor .primary_infor--form input[type=submit],
+.primary .secondary_main .secondary_infor .primary_infor--form input[type=submit],
+.secondary .primary_main .primary_infor .primary_infor--form input[type=submit],
+.secondary .primary_main .secondary_infor .primary_infor--form input[type=submit],
+.secondary .secondary_main .primary_infor .primary_infor--form input[type=submit],
+.secondary .secondary_main .secondary_infor .primary_infor--form input[type=submit] {
+  padding: 12px 18px;
+  background-color: #3c64b1;
+  color: #fff;
+  transition: 0.4s;
+  border: none;
+  cursor: pointer;
+}
+.primary .primary_main .primary_infor .primary_infor--form input[type=submit]:hover,
+.primary .primary_main .secondary_infor .primary_infor--form input[type=submit]:hover,
+.primary .secondary_main .primary_infor .primary_infor--form input[type=submit]:hover,
+.primary .secondary_main .secondary_infor .primary_infor--form input[type=submit]:hover,
+.secondary .primary_main .primary_infor .primary_infor--form input[type=submit]:hover,
+.secondary .primary_main .secondary_infor .primary_infor--form input[type=submit]:hover,
+.secondary .secondary_main .primary_infor .primary_infor--form input[type=submit]:hover,
+.secondary .secondary_main .secondary_infor .primary_infor--form input[type=submit]:hover {
+  background-color: #6987be;
+  transition: 0.4s;
+}
+.primary .primary_main .primary_infor .primary_infor--note,
+.primary .primary_main .secondary_infor .primary_infor--note,
+.primary .secondary_main .primary_infor .primary_infor--note,
+.primary .secondary_main .secondary_infor .primary_infor--note,
+.secondary .primary_main .primary_infor .primary_infor--note,
+.secondary .primary_main .secondary_infor .primary_infor--note,
+.secondary .secondary_main .primary_infor .primary_infor--note,
+.secondary .secondary_main .secondary_infor .primary_infor--note {
+  margin-top: 16px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  color: #737b7d;
+}
+.primary .primary_main .primary_infor .secondary_infor--options,
+.primary .primary_main .secondary_infor .secondary_infor--options,
+.primary .secondary_main .primary_infor .secondary_infor--options,
+.primary .secondary_main .secondary_infor .secondary_infor--options,
+.secondary .primary_main .primary_infor .secondary_infor--options,
+.secondary .primary_main .secondary_infor .secondary_infor--options,
+.secondary .secondary_main .primary_infor .secondary_infor--options,
+.secondary .secondary_main .secondary_infor .secondary_infor--options {
+  gap: 30px;
+}
+.primary .primary_main .primary_infor .secondary_infor--options .secondary_options--item .secondary_item--image,
+.primary .primary_main .secondary_infor .secondary_infor--options .secondary_options--item .secondary_item--image,
+.primary .secondary_main .primary_infor .secondary_infor--options .secondary_options--item .secondary_item--image,
+.primary .secondary_main .secondary_infor .secondary_infor--options .secondary_options--item .secondary_item--image,
+.secondary .primary_main .primary_infor .secondary_infor--options .secondary_options--item .secondary_item--image,
+.secondary .primary_main .secondary_infor .secondary_infor--options .secondary_options--item .secondary_item--image,
+.secondary .secondary_main .primary_infor .secondary_infor--options .secondary_options--item .secondary_item--image,
+.secondary .secondary_main .secondary_infor .secondary_infor--options .secondary_options--item .secondary_item--image {
+  margin-bottom: 16px;
+}
+.primary .primary_main .primary_infor .secondary_infor--options .secondary_options--item .secondary_item--text,
+.primary .primary_main .secondary_infor .secondary_infor--options .secondary_options--item .secondary_item--text,
+.primary .secondary_main .primary_infor .secondary_infor--options .secondary_options--item .secondary_item--text,
+.primary .secondary_main .secondary_infor .secondary_infor--options .secondary_options--item .secondary_item--text,
+.secondary .primary_main .primary_infor .secondary_infor--options .secondary_options--item .secondary_item--text,
+.secondary .primary_main .secondary_infor .secondary_infor--options .secondary_options--item .secondary_item--text,
+.secondary .secondary_main .primary_infor .secondary_infor--options .secondary_options--item .secondary_item--text,
+.secondary .secondary_main .secondary_infor .secondary_infor--options .secondary_options--item .secondary_item--text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.3px;
+  color: #737b7d;
+}
+
+.secondary {
+  margin-bottom: 86px;
+}
+
+.news {
+  font-family: "Mulish", sans-serif;
+  text-align: center;
+  margin-bottom: 95px;
+}
+.news .news_main {
+  gap: 30px;
+}
+.news .news_main .news_item .news_item--text {
+  margin-top: 32px;
+}
+.news .news_main .news_item .news_item--text .news_item--title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #373f41;
+  margin-bottom: 12px;
+}
+.news .news_main .news_item .news_item--text .news_item--para {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #373f41;
+}
+
+@media (max-width: 390px) {
+  .header {
     display: none;
   }
+  .header_mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 390px;
+    z-index: 99;
+  }
+  .container {
+    width: 100%;
+    margin: auto;
+  }
+  .banner {
+    width: 100%;
+  }
+  .banner .banner_main {
+    width: 100%;
+    left: 0;
+  }
+  .banner .banner_main .banner_para .banner_tit {
+    font-size: 7vw;
+  }
+  .business .business_tit .business_title {
+    font-size: 6vw;
+    padding-bottom: 10px;
+  }
+  .business .business_options {
+    flex-direction: column;
+  }
+  .business .business_options .business_options--item {
+    padding-top: 10px;
+  }
+  .primary .primary_main,
+.primary .secondary_main,
+.secondary .primary_main,
+.secondary .secondary_main {
+    flex-direction: column;
+  }
+  .primary .primary_main .primary_image,
+.primary .primary_main .secondary_image,
+.primary .secondary_main .primary_image,
+.primary .secondary_main .secondary_image,
+.secondary .primary_main .primary_image,
+.secondary .primary_main .secondary_image,
+.secondary .secondary_main .primary_image,
+.secondary .secondary_main .secondary_image {
+    width: 100%;
+  }
+  .primary .primary_main .primary_infor,
+.primary .primary_main .secondary_infor,
+.primary .secondary_main .primary_infor,
+.primary .secondary_main .secondary_infor,
+.secondary .primary_main .primary_infor,
+.secondary .primary_main .secondary_infor,
+.secondary .secondary_main .primary_infor,
+.secondary .secondary_main .secondary_infor {
+    width: 90%;
+  }
+  .news .news_main {
+    flex-wrap: wrap;
+  }
 }
-@media screen and (min-width: 769px) {
+@media (min-width: 391px) and (max-width: 768px) {
+  .header {
+    display: none;
+  }
+  .header_mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    z-index: 99;
+  }
+  .container {
+    width: 100%;
+    margin: auto;
+  }
+  .banner {
+    width: 100%;
+  }
+  .banner .banner_main {
+    width: 100%;
+    left: 0;
+  }
+  .banner .banner_main .banner_para .banner_tit {
+    font-size: 6vw;
+  }
+  .business .business_tit .business_title {
+    padding-bottom: 10px;
+  }
+  .business .business_options {
+    flex-direction: column;
+  }
+  .business .business_options .business_options--item {
+    padding-top: 10px;
+  }
+  .primary .primary_main,
+.primary .secondary_main,
+.secondary .primary_main,
+.secondary .secondary_main {
+    flex-direction: column;
+  }
+  .primary .primary_main .primary_image,
+.primary .primary_main .secondary_image,
+.primary .secondary_main .primary_image,
+.primary .secondary_main .secondary_image,
+.secondary .primary_main .primary_image,
+.secondary .primary_main .secondary_image,
+.secondary .secondary_main .primary_image,
+.secondary .secondary_main .secondary_image {
+    width: 100%;
+  }
+  .primary .primary_main .primary_infor,
+.primary .primary_main .secondary_infor,
+.primary .secondary_main .primary_infor,
+.primary .secondary_main .secondary_infor,
+.secondary .primary_main .primary_infor,
+.secondary .primary_main .secondary_infor,
+.secondary .secondary_main .primary_infor,
+.secondary .secondary_main .secondary_infor {
+    width: 90%;
+  }
+  .news .news_main {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .news .news_main .news_item .news_item--image img {
+    width: 100.1%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header_mobile {
+    display: none;
+  }
+  .container {
+    width: 100%;
+    margin: auto;
+  }
+  .header .header_main {
+    width: 90%;
+    margin: auto;
+  }
+  .banner {
+    width: 100%;
+  }
+  .banner .banner_main {
+    width: 100%;
+    left: 0;
+  }
+  .banner .banner_main .banner_para .banner_tit {
+    font-size: 6vw;
+  }
+  .business .business_tit .business_title {
+    padding-bottom: 10px;
+  }
+  .business .business_options {
+    flex-direction: column;
+  }
+  .business .business_options .business_options--item {
+    padding-top: 10px;
+  }
+  .primary .primary_main,
+.primary .secondary_main,
+.secondary .primary_main,
+.secondary .secondary_main {
+    flex-direction: column;
+  }
+  .primary .primary_main .primary_image,
+.primary .primary_main .secondary_image,
+.primary .secondary_main .primary_image,
+.primary .secondary_main .secondary_image,
+.secondary .primary_main .primary_image,
+.secondary .primary_main .secondary_image,
+.secondary .secondary_main .primary_image,
+.secondary .secondary_main .secondary_image {
+    width: 100%;
+  }
+  .primary .primary_main .primary_infor,
+.primary .primary_main .secondary_infor,
+.primary .secondary_main .primary_infor,
+.primary .secondary_main .secondary_infor,
+.secondary .primary_main .primary_infor,
+.secondary .primary_main .secondary_infor,
+.secondary .secondary_main .primary_infor,
+.secondary .secondary_main .secondary_infor {
+    width: 90%;
+  }
+  .news .news_main {
+    flex-wrap: wrap;
+  }
+  .news .news_main .news_item {
+    width: 45%;
+    padding: 10px;
+  }
+}
+@media (min-width: 1025px) {
   .header_mobile {
     display: none;
   }

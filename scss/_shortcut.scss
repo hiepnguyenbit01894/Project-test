@@ -17,7 +17,7 @@
 }
 
 .container {
-  width: 1440px;
+  width: 1110px;
   margin: auto;
 }
 
@@ -27,8 +27,6 @@
 
 @mixin button {
   padding: 12px 18px;
-  // width: 106px;
-  // height: 42px;
   background-color: $letterblue;
   color: #fff;
   transition: 0.4s;
