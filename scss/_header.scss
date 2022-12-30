@@ -1,0 +1,43 @@
+
+.header,
+.header_mobile {
+    font-family: 'Mulish', sans-serif;
+    .header_main{
+        padding: 40px 0;
+    }
+    span {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .header_navigation {
+        gap: 32px;
+
+        span {
+            .navigation_infor--item {
+                font-weight: 600;
+
+                letter-spacing: 0.2px;
+                color: $letterblack;
+            }
+        }
+    }
+
+    .header_navigation--form {
+        gap: 20px;
+        span {
+            .navigation_form--item {
+                @include inforText(700,14px,18px,00.3px);
+                color: $letterblue;
+                transition:  0.4s;
+                &:hover{
+                    color: $hoverblue;
+                    transition:  0.4s;
+                }
+            }
+            .navigation_form--start {
+                @include button;
+            }
+        }
+    }
+}

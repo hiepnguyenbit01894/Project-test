@@ -1,0 +1,79 @@
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 1440px;
+  margin: auto;
+}
+
+.header, .header_mobile {
+  font-family: "Mulish", sans-serif;
+}
+.header .header_main, .header_mobile .header_main {
+  padding: 23px 0;
+}
+.header span, .header_mobile span {
+  font-size: 14px;
+  line-height: 18px;
+}
+.header .header_navigation, .header_mobile .header_navigation {
+  gap: 32px;
+}
+.header .header_navigation span .navigation_infor--item, .header_mobile .header_navigation span .navigation_infor--item {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #373F41;
+}
+.header .header_navigation--form, .header_mobile .header_navigation--form {
+  gap: 20px;
+}
+.header .header_navigation--form span .navigation_form--item, .header_mobile .header_navigation--form span .navigation_form--item {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #3C64B1;
+  transition: 0.4s;
+}
+.header .header_navigation--form span .navigation_form--item:hover, .header_mobile .header_navigation--form span .navigation_form--item:hover {
+  color: #6987be;
+  transition: 0.4s;
+}
+.header .header_navigation--form span .navigation_form--start, .header_mobile .header_navigation--form span .navigation_form--start {
+  padding: 12px 18px;
+  width: 106px;
+  height: 42px;
+  background-color: #3C64B1;
+  color: #fff;
+  transition: 0.4s;
+}
+.header .header_navigation--form span .navigation_form--start:hover, .header_mobile .header_navigation--form span .navigation_form--start:hover {
+  background-color: #6987be;
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    display: none;
+  }
+  .header_mobile .header_navigation {
+    display: none;
+  }
+}
+@media screen and (min-width: 769px) {
+  .header_mobile {
+    display: none;
+  }
+}/*# sourceMappingURL=Project-Test.css.map */

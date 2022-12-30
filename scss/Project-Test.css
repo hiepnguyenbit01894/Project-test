@@ -1,0 +1,183 @@
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 1440px;
+  margin: auto;
+}
+
+.mulish {
+  font-family: "Mulish", sans-serif;
+}
+
+.header,
+.header_mobile {
+  font-family: "Mulish", sans-serif;
+}
+.header .header_main,
+.header_mobile .header_main {
+  padding: 40px 0;
+}
+.header span,
+.header_mobile span {
+  font-size: 14px;
+  line-height: 18px;
+}
+.header .header_navigation,
+.header_mobile .header_navigation {
+  gap: 32px;
+}
+.header .header_navigation span .navigation_infor--item,
+.header_mobile .header_navigation span .navigation_infor--item {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #373F41;
+}
+.header .header_navigation--form,
+.header_mobile .header_navigation--form {
+  gap: 20px;
+}
+.header .header_navigation--form span .navigation_form--item,
+.header_mobile .header_navigation--form span .navigation_form--item {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.3px;
+  color: #3C64B1;
+  transition: 0.4s;
+}
+.header .header_navigation--form span .navigation_form--item:hover,
+.header_mobile .header_navigation--form span .navigation_form--item:hover {
+  color: #6987be;
+  transition: 0.4s;
+}
+.header .header_navigation--form span .navigation_form--start,
+.header_mobile .header_navigation--form span .navigation_form--start {
+  padding: 12px 18px;
+  width: 106px;
+  background-color: #3C64B1;
+  color: #fff;
+  transition: 0.4s;
+}
+.header .header_navigation--form span .navigation_form--start:hover,
+.header_mobile .header_navigation--form span .navigation_form--start:hover {
+  background-color: #6987be;
+  transition: 0.4s;
+}
+
+.banner {
+  background: url(/image/bg.png) #E5E5E5;
+  position: relative;
+  height: 560px;
+  font-family: "Mulish", sans-serif;
+  text-align: center;
+  width: 100vw;
+}
+.banner .banner_main {
+  gap: 56px;
+  position: absolute;
+  width: 730px;
+  height: 286px;
+  left: calc(50% - 365px);
+  top: calc(50% - 143px);
+}
+.banner .banner_main .banner_para {
+  width: 100%;
+  height: 188px;
+}
+.banner .banner_main .banner_para .banner_tit {
+  height: 112px;
+  color: #373F41;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 56px;
+  letter-spacing: 0.2px;
+}
+.banner .banner_main .banner_para .banner_text {
+  margin-top: 32px;
+  height: 44px;
+  color: #737B7D;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.3px;
+}
+.banner .banner_main .banner_buttons {
+  margin-top: 56px;
+  gap: 24px;
+}
+.banner .banner_main .banner_buttons span {
+  display: inline-block;
+}
+.banner .banner_main .banner_buttons .banner_buttons--start {
+  padding: 12px 18px;
+  width: 106px;
+  background-color: #3C64B1;
+  color: #fff;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.banner .banner_main .banner_buttons .banner_buttons--start:hover {
+  background-color: #6987be;
+  transition: 0.4s;
+}
+.banner .banner_main .banner_buttons .banner_buttons--learn {
+  padding: 12px 18px;
+  width: 106px;
+  background-color: #3C64B1;
+  color: #fff;
+  transition: 0.4s;
+  background-color: transparent;
+  border: 1px #3C64B1 solid;
+  color: #3C64B1;
+  transition: 0.4s;
+}
+.banner .banner_main .banner_buttons .banner_buttons--learn:hover {
+  background-color: #6987be;
+  transition: 0.4s;
+}
+.banner .banner_main .banner_buttons .banner_buttons--learn:hover {
+  background-color: #3C64B1;
+  transition: 0.4s;
+  color: #fff;
+  cursor: pointer;
+}
+
+.business {
+  text-align: center;
+  font-family: "Mulish", sans-serif;
+}
+.business .business_tit .business_title {
+  margin-top: 60px;
+  height: 40px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0.1px;
+}
+
+@media screen and (max-width: 768px) {
+  .header_mobile .header_navigation {
+    display: none;
+  }
+}
+@media screen and (min-width: 769px) {
+  .header_mobile {
+    display: none;
+  }
+}/*# sourceMappingURL=Project-Test.css.map */
