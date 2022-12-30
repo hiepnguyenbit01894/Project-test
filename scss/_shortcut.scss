@@ -1,47 +1,47 @@
 .flex-between {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .flex-around {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
-    width: 1440px;
-    margin: auto;
+  width: 1440px;
+  margin: auto;
 }
 
 .mulish {
-    font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 
 @mixin button {
-    padding: 12px 18px;
-    width: 106px;
-    // height: 42px;
-    background-color: $letterblue;
-    color: #fff;
-    transition: 0.4s;
+  padding: 12px 18px;
+  // width: 106px;
+  // height: 42px;
+  background-color: $letterblue;
+  color: #fff;
+  transition: 0.4s;
 
-    &:hover {
-        background-color: #6987be;
-        transition: 0.4s;
-    }
+  &:hover {
+    background-color: #6987be;
+    transition: 0.4s;
+  }
 }
 
 @mixin inforText($fw, $fs, $lh, $ls) {
-    font-weight: $fw;
-    font-size: $fs;
-    line-height: $lh;
-    letter-spacing: $ls;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
 }

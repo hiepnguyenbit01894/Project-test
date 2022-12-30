@@ -1,12 +1,43 @@
 .business {
-    text-align: center;
-    font-family: 'Mulish', sans-serif;
-
-    .business_tit {
-        .business_title {
-            margin-top: 60px;
-            height: 40px;
-            @include inforText(700,32px,40px,0.1px);
-        }
+  text-align: center;
+  font-family: "Mulish", sans-serif;
+  margin-bottom: 106px;
+  .business_tit {
+    .business_title {
+      margin-top: 60px;
+      margin-bottom: 24px;
+      height: 40px;
+      @include inforText(700, 32px, 40px, 0.1px);
     }
+    .business_text {
+      @include inforText(400, 16px, 22px, 0.3px);
+      color: $colortext;
+      margin-bottom: 35px;
+    }
+  }
+  .business_options {
+    .business_options--item {
+      width: 350px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        opacity: 0.7;
+        transition: 0.3s;
+      }
+      .business_item--title {
+        margin-top: 24px;
+        margin-bottom: 12px;
+        @include inforText(700, 18px, 24px, 0.1px);
+      }
+      .business_item--text {
+        @include inforText(400, 14px, 20px, 0.2px);
+        color: $colortext;
+        margin-bottom: 34px;
+      }
+      .business_item--discover {
+        @include inforText(700, 14px, 18px, 0.3px);
+        color: $letterblue;
+      }
+    }
+  }
 }
